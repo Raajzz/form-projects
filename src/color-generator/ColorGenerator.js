@@ -1,15 +1,28 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import Values from 'values.js';
+
+const checkColor = (color) => {
+  if(color.length === 4 || color.length === 7){
+    if(/^#[0-9a-fA-F]+$/g.test(color)){
+      return true;
+    }
+  }
+  return false;
+}
 
 const ColorGenerator = () => {
-  const ref = useRef(null);
   const [color, setColor] = useState("");
   const [errorState, setErrorState] = useState(false);
+  const ref = useRef(null)
+
+  useEffect(() => {
+    ref.current.focus()
+  })
 
   const clickHandler = (e) => {
     e.preventDefault();
     console.log("inside click handler")
-    if (ref.current.value.charAt(0) === "#" && ref.current.value.length >= 3 && ref.current.value.length <= 6) {
-      setColor(ref.current.value);
+    if (checkColor(color)) {
       setErrorState(false);
     } else {
       setErrorState(true);
@@ -27,8 +40,13 @@ const ColorGenerator = () => {
           <input
             type="text"
             ref={ref}
+            value={color}
+            onChange={(e)=>{
+              setColor(e.target.value);
+            }}
             className={`rounded-l-md bg-gray-200 w-36 px-3 py-1 text-sm sm:text-2xl sm:w-60
-            ${errorState ? " border-2 border-rose-500" : ""}`}
+            outline-0
+            ${(color.length === 0)?"outline-1":checkColor(color)?" border-2 border-green-500" : " border-2 border-rose-500"}`}
           />
           <button
             className={` 
