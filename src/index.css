@@ -3,8 +3,18 @@
     @apply  w-fit rounded-lg bg-gray-300 text-gray-600 px-4 py-1 font-extralight text-lg text-center mx-auto;
   }
   .img-style-app{
-    @apply rounded-lg border-2 border-violet-500 w-80 h-64 sm:w-[25rem] lg:w-[30rem] xl:w-[23rem] my-10 mx-10 object-cover;
+    @apply rounded-lg border-2 border-sky-500 w-80 h-64 sm:w-[25rem] lg:w-[27rem] xl:w-[23rem] object-cover;
   }
+  .img-hover-overlay{
+    @apply absolute top-0 rounded-lg h-full w-full opacity-0 hover:opacity-75 ease-in-out duration-500 bg-gradient-to-r from-sky-600 to-sky-800 font-bold text-white text-2xl vert-center
+  }
+}
+
+
+.vert-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @tailwind base;
