@@ -1,3 +1,7 @@
+# form-project
+
+A set of three react projects that involves forms. This projects is aimed at receiving inputs from the user and perform some operations. The three projects are light to dark color generator, a to-do list application called grocery-bud and finally a lorem ipsum paragraph generator.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
