@@ -1,6 +1,6 @@
 # form-project
 
-A set of three react projects that involves forms. This projects is aimed at receiving inputs from the user and perform some operations. The three projects are light to dark color generator, a to-do list application called grocery-bud and finally a lorem ipsum paragraph generator.
+A set of three react projects that involves forms. This projects is aimed at receiving inputs from the user and perform some operations. The three projects are light to dark color generator, a to-do list application called grocery-bud and finally a lorem ipsum paragraph generator. A live demostration of the website can be seen <a href="https://raajzz-forms-project.netlify.app/">here</a>.
 
 # Getting Started with Create React App
 
